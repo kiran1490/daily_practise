@@ -16,3 +16,22 @@ void display_bits(int num)
 	}
 	printf("\n");
 }
+
+/*
+	a funtion to toggle the positioned bit
+*/
+int toggle_bit(int num, int position)
+{
+	int bit_mask = (1<<position);
+	if(num&bit_mask)
+	{
+		bit_mask = ~(bit_mask);	
+		num = num & bit_mask;
+	}
+	else
+	{
+		num = num | bit_mask;
+		
+	}
+	return num;
+}
