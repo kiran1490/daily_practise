@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 /*
 	An helper function to display the bits of the input argument
 	intput parameter an int
@@ -34,4 +33,21 @@ int toggle_bit(int num, int position)
 		
 	}
 	return num;
+}
+/*
+	a funtion to check whether the given bit is SET or NOT SET in NUMBER
+*/
+void check_bit_status(int num,int position)
+{
+	int bit_mask = (1<<position);
+	if(num&bit_mask)
+	{
+		printf("The Bit %d in 0x%X is SET\n",position,num);
+	}
+	else
+	{
+		printf("The Bit %d in 0x%X is NOT SET\n",position,num);
+		
+	}
+	
 }
