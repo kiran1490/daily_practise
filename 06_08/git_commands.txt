@@ -1,0 +1,86 @@
+ mkdir git_e21
+ cd git_e21/
+ git init
+ git status
+ git add * 
+ git status 
+ git commit -m "initial_e21_firmware"
+ git status 
+ git status 
+ git status
+ git status
+ git add *
+ git status
+ git reset bsp/design-rtl_bl/core.dts
+ git status
+ git commit -m "compiled verison changes to the initial code"
+ git status
+ git status
+ git status
+ git token.txt
+ git init
+ git status 
+ git add *
+ git status
+ git reset 06_08/.bits.c.swp 06_08/a.out
+ git status
+ git commit -m "initial commmit for new repo"
+ git push
+ git remote add origin https://github.com/kiran1490/daily_practise.git
+ git branch -M main
+ git push -u origin main
+ git config --global user.name "kiran1490"
+ git config --global user.email "kiranallada1998@gmail.com"
+ git config -l
+ git push -u origin main
+ git status
+ git log
+ git 
+ git status
+ git push
+ git status 
+ git rest 06_08/bits.c
+ git reset 06_08/bits.c
+ git rm 06_08/bits.c 
+ git status 
+ git add
+ git add *
+ git status 
+ git commit -m "Addind toggle bit helper function"
+ git push
+ git status 
+ git status 
+ git status 
+ git add *
+ git status
+ git commint -m "Implementation of first bit helper function called display bits"
+ git commit -m "Implementation of first bit helper function called display bits"
+ git push
+ git status 
+ git diff bits_helper_functions.h
+ git diff project_main.c
+ git add *
+ git status 
+ git commit -m "added set bit function"
+ git status 
+ git log
+ git push 
+ git log 
+ git reset 8dca2da91f3310ebd4341e7449464c05e670696d
+ git status 
+ git add *
+ git status 
+ git commit -m "demo purpose"
+ git push 
+ git pull
+ git status 
+ git log
+ git push 
+ git log 
+ git status 
+ git add a.out bits_helper_functions.* project_main.c 
+ git status 
+ git commit -m "added clear bit function"
+ git push 
+ history | grep "git"
+ history | grep "git" >> git_commands.txt
