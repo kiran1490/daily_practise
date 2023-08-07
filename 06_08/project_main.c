@@ -10,6 +10,9 @@ int main()
 	display_bits(a);
 	*/
 	check_bit_status(a,1);
+	b = set_bit(a,1);
+	display_bits(a);
+	check_bit_status(a,1);
 
 
 }

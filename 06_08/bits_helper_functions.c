@@ -51,3 +51,19 @@ void check_bit_status(int num,int position)
 	}
 	
 }
+/*
+	a funtion to SET the particular bit in a given number
+*/
+int set_bit(int num,int position)
+{
+	int bit_mask = (1<<position);
+	if(num&bit_mask)
+	{
+		return num;
+	}
+	else
+	{
+		num = num | bit_mask;
+	}
+	
+}
