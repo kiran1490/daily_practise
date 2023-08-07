@@ -9,10 +9,12 @@ int main()
 	a = toggle_bit(a,1);
 	display_bits(a);
 	*/
-	check_bit_status(a,1);
-	b = set_bit(a,1);
+	check_bit_status(a,0);
+	a = set_bit(a,0);
 	display_bits(a);
-	check_bit_status(a,1);
+	a = clear_bit(a,0);
+	check_bit_status(a,0);
+	display_bits(a);
 
 
 }
