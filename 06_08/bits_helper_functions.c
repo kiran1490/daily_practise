@@ -84,3 +84,44 @@ int clear_bit(int num,int position)
 	return num;
 	
 }
+/*
+	a funtion to remove last bit in a given number
+*/
+int remove_last_bit(int num)
+{
+	num = num>>1;
+	return num;
+	
+}
+int count_set_bits(int num)
+{
+	int mask = 0;
+	int i = 0,count = 0;
+	for(i=31;i>=0;i--)
+	{
+		mask = (1<<i);
+		num&mask ? count++ : count ;
+	}
+	return count;
+}
+/*
+int count_set_bits_position(int num,int *position)
+{
+	int mask = 0;
+	int i = 0,count = 0;
+	for(i=31;i>=0;i--)
+	{
+		mask = (1<<i);
+		num&mask ? count++ : count ;
+	}
+	if(count == 1)
+	{
+		for(i=31;i>=0;i--)
+		{
+			mask = (1<<i);
+			num&mask ? *position = i : count ;
+		}
+	}
+	return count;
+}
+*/
