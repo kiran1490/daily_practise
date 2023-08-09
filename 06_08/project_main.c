@@ -14,12 +14,18 @@ int main()
 	a = clear_bit(a,0);
 	check_bit_status(a,0);
 	display_bits(a);
-	08_08 */
+	08_08 
 
 	a = remove_last_bit(a);
 	display_bits(a);
 	int c = count_set_bits(a);
 	printf("\nThe set bits num is %d\n",c);
-
+	09_08 */
+	a = 0x100;
+	power_of_2(a);
+	power_of_4(a);
+	power_of_8(a);
+	power_of_16(a);
+		
 
 }

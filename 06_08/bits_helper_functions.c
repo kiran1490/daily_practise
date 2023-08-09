@@ -93,6 +93,9 @@ int remove_last_bit(int num)
 	return num;
 	
 }
+/*
+	a funtion to count the number of bits set in the given number
+*/
 int count_set_bits(int num)
 {
 	int mask = 0;
@@ -105,10 +108,13 @@ int count_set_bits(int num)
 	return count;
 }
 /*
-int count_set_bits_position(int num,int *position)
+	a helper funtion to return the position of the set bit if the set bits are 1
+*/
+int bit_position(int num)
 {
 	int mask = 0;
 	int i = 0,count = 0;
+	int position = 0;
 	for(i=31;i>=0;i--)
 	{
 		mask = (1<<i);
@@ -119,9 +125,83 @@ int count_set_bits_position(int num,int *position)
 		for(i=31;i>=0;i--)
 		{
 			mask = (1<<i);
-			num&mask ? *position = i : count ;
+			num&mask ? position = i : count ;
 		}
 	}
-	return count;
+	else
+	{
+		return -1;
+	}
+	return position;
 }
+/*
+	funtion to check whether a number is power of 2 or not
 */
+void power_of_2(int num)
+{
+	int position = bit_position(num);
+	if(position == -1)
+	{
+		printf("\n Not a power of 2");
+	}
+	else
+	{
+		printf("\n power of 2");
+	}
+}
+/*
+	funtion to check whether a number is power of 4 or not
+*/
+void power_of_4(int num)
+{
+	int position = bit_position(num);
+	if(position == -1)
+	{
+		printf("\n Not a power of 4");
+	}
+	else 
+	{
+		if (position%2==0)
+		printf("\n power of 4");
+		else
+		printf("\n not a power of 5");
+	}
+}
+
+/*
+	funtion to check whether a number is power of 8 or not
+*/
+void power_of_8(int num)
+{
+	int position = bit_position(num);
+	if(position == -1)
+	{
+		printf("\n Not a power of 8");
+	}
+	else 
+	{
+		if (position%3==0)
+		printf("\n power of 8");
+		else
+		printf("\n not a power of 8");
+	}
+}
+
+/*
+	funtion to check whether a number is power of 16 or not
+*/
+void power_of_16(int num)
+{
+	int position = bit_position(num);
+	if(position == -1)
+	{
+		printf("\n Not a power of 16");
+	}
+	else 
+	{
+		if (position%4==0)
+		printf("\n power of 16");
+		else
+		printf("\n not a power of 16");
+	}
+}

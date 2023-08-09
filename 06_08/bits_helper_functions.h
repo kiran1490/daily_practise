@@ -8,5 +8,10 @@ int set_bit(int,int);
 int clear_bit(int,int);
 int remove_last_bit(int);
 int count_set_bits(int);
+int bit_position(int);
+void power_of_2(int);
+void power_of_4(int);
+void power_of_8(int);
+void power_of_16(int);
 
 #endif
