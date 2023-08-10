@@ -20,12 +20,16 @@ int main()
 	display_bits(a);
 	int c = count_set_bits(a);
 	printf("\nThe set bits num is %d\n",c);
-	09_08 */
+	09_08 
 	a = 0x100;
 	power_of_2(a);
 	power_of_4(a);
 	power_of_8(a);
 	power_of_16(a);
-		
+	*/	
+	//a = a^a;
+	//display_bits(a);
+	a = swap_bits(a,3,4);
+
 
 }

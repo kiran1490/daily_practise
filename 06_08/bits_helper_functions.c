@@ -205,3 +205,17 @@ void power_of_16(int num)
 		printf("\n not a power of 16");
 	}
 }
+/*
+	a function to swap i and j bits in a number
+*/
+int swap_bits(int num, int i ,int j)
+{
+	int mask_i = (1<<i);
+	int collect_bit_i = 0;
+	(num&mask_i) ? collect_bit_i = 1 : collect_bit_i = 0;
+	int mask_j = (1<<i);
+	int collect_bit_j = 0;
+	(num&mask_j) ? collect_bit_j = 1 : collect_bit_j = 0;
+	int sub_mask_i = collect_bit_j << j;
+	int sub_mask_j = collect_bit_i << i;
+}
