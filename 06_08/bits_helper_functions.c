@@ -210,12 +210,32 @@ void power_of_16(int num)
 */
 int swap_bits(int num, int i ,int j)
 {
+	/*
+	0 ^ 0 = 0
+	0 ^ 1 = 1
+	1 ^ 0 = 1
+	1 ^ 1 = 0
+	*/
 	int mask_i = (1<<i);
 	int collect_bit_i = 0;
-	(num&mask_i) ? collect_bit_i = 1 : collect_bit_i = 0;
-	int mask_j = (1<<i);
+	collect_bit_i = (num&mask_i) ?  1 :  0;
+	int mask_j = (1<<j);
 	int collect_bit_j = 0;
-	(num&mask_j) ? collect_bit_j = 1 : collect_bit_j = 0;
-	int sub_mask_i = collect_bit_j << j;
-	int sub_mask_j = collect_bit_i << i;
+	collect_bit_j = (num&mask_j) ? 1 :  0;
+	if(collect_bit_i ^ collect_bit_j) //checking whether bits are same or not uisng XOR operator 
+	{
+		num = num ^ mask_i;
+		num = num ^ mask_j;
+	}
+	else
+	{
+		printf("\nBits are same nothing to be done\n");
+	}
+	return num;
+}
+void swap_numbers(int *num1,int *num2)
+{
+	*num1 = *num1 ^ *num2;
+	*num2 = *num1 ^ *num2;
+	*num1 = *num1 ^ *num2;
 }

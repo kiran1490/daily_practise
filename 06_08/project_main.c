@@ -29,7 +29,14 @@ int main()
 	*/	
 	//a = a^a;
 	//display_bits(a);
-	a = swap_bits(a,3,4);
+	//a = swap_bits(a,0,1);
+	//display_bits(a);
+	int b = 0xbbbb;
+	swap_numbers(&a,&b);
+	printf("\nThe num is 0x%x",a);
+	printf("\nThe num is 0x%x",b);
+	printf("\n");
+	
 
 
 }

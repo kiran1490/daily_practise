@@ -13,5 +13,7 @@ void power_of_2(int);
 void power_of_4(int);
 void power_of_8(int);
 void power_of_16(int);
+int swap_bits(int,int,int);
+void swap_numbers(int*,int*);
 
 #endif
