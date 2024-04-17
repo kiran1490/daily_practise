@@ -1,0 +1,7 @@
+order of the folder
+1. simple_function_pointer.c
+2. simple_struct_pointer.c
+3. struct_dot_notation.c
+4. single_pointer_multiple_functions.c
+5. argument_as_function_pointer.c
+6. multiple_argument_as_function_pointers.c
