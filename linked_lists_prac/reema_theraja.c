@@ -45,16 +45,63 @@ simple_ll *insert_beg(simple_ll *head)
 	return head;
 }
 /* Case2 */
-simple_ll *insert_end(simple_ll *tail)
+simple_ll *insert_end(simple_ll *head)
 {
 	
 	simple_ll *new_node = malloc(sizeof(simple_ll));
+	simple_ll *iter = malloc(sizeof(simple_ll));
 	printf("Enter the new node data\n");
 	scanf("%d",&new_node->a);
 	new_node->node = NULL;
-	tail->node = new_node;
-	tail = new_node;
-	return tail;
+	iter = head;
+	while(iter->node!=NULL)
+	{
+		iter = iter->node;
+	}
+	iter->node = new_node;
+	return head;
+}
+/* Case3 */
+/* Insert after value 10 */
+/* page 186 */ 
+simple_ll *insert_after(simple_ll *head,int num) 
+{
+	simple_ll *new_node = malloc(sizeof(simple_ll));
+	simple_ll *iter = malloc(sizeof(simple_ll));
+	simple_ll *pre_iter = malloc(sizeof(simple_ll));
+	printf("Enter the new node data\n");
+	scanf("%d",&new_node->a);
+	new_node->node = NULL;
+	iter = head;
+	while(pre_iter->a!=num)
+	{
+		pre_iter = iter;
+		iter = iter->node;
+	}
+	pre_iter->node = new_node;
+	new_node->node = iter;
+	return head;
+}
+/* Case4 */
+/* Insert before value 10 */
+/* page 186 */ 
+simple_ll *insert_before(simple_ll *head,int num) 
+{
+	simple_ll *new_node = malloc(sizeof(simple_ll));
+	simple_ll *iter = malloc(sizeof(simple_ll));
+	simple_ll *pre_iter = malloc(sizeof(simple_ll));
+	printf("Enter the new node data\n");
+	scanf("%d",&new_node->a);
+	new_node->node = NULL;
+	iter = head;
+	while(iter->a!=num)
+	{
+		pre_iter = iter;
+		iter = iter->node;
+	}
+	pre_iter->node = new_node;
+	new_node->node = iter;
+	return head;
 }
 int main()
 {
@@ -69,8 +116,10 @@ int main()
 	two->node = NULL;
 	tail = two;
 	head = insert_beg(head);
-	tail = insert_end(tail);
+	head = insert_end(head);
+	head = insert_after(head,10);
+	head = insert_before(head,10);
 	display_ll(head);
-	
+	return 0;
 }
 
