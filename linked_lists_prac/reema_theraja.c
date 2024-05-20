@@ -38,7 +38,7 @@ case4: Adding a new node before a given node
 simple_ll *insert_beg(simple_ll *head)
 {
 	simple_ll *new_node = malloc(sizeof(simple_ll));
-	printf("Enter the new node data\n");
+	printf("Enter new node data which inserted at the begining of the ll\n");
 	scanf("%d",&new_node->a);
 	new_node->node = head;
 	head = new_node;
@@ -50,7 +50,7 @@ simple_ll *insert_end(simple_ll *head)
 	
 	simple_ll *new_node = malloc(sizeof(simple_ll));
 	simple_ll *iter = malloc(sizeof(simple_ll));
-	printf("Enter the new node data\n");
+	printf("Enter new node data which inserted at the end of the ll\n");
 	scanf("%d",&new_node->a);
 	new_node->node = NULL;
 	iter = head;
@@ -69,7 +69,7 @@ simple_ll *insert_after(simple_ll *head,int num)
 	simple_ll *new_node = malloc(sizeof(simple_ll));
 	simple_ll *iter = malloc(sizeof(simple_ll));
 	simple_ll *pre_iter = malloc(sizeof(simple_ll));
-	printf("Enter the new node data\n");
+	printf("Enter new node data which inserted after the value of the ll\n");
 	scanf("%d",&new_node->a);
 	new_node->node = NULL;
 	iter = head;
@@ -90,7 +90,7 @@ simple_ll *insert_before(simple_ll *head,int num)
 	simple_ll *new_node = malloc(sizeof(simple_ll));
 	simple_ll *iter = malloc(sizeof(simple_ll));
 	simple_ll *pre_iter = malloc(sizeof(simple_ll));
-	printf("Enter the new node data\n");
+	printf("Enter new node data which inserted before the value of the ll\n");
 	scanf("%d",&new_node->a);
 	new_node->node = NULL;
 	iter = head;
@@ -109,6 +109,7 @@ int main()
 	simple_ll *two = malloc(sizeof(simple_ll));
 	simple_ll *head = malloc(sizeof(simple_ll));
 	simple_ll *tail = malloc(sizeof(simple_ll));
+	int value = 0;
 	head = one;
 	one->a = 10;
 	one->node = two;
@@ -117,8 +118,12 @@ int main()
 	tail = two;
 	head = insert_beg(head);
 	head = insert_end(head);
-	head = insert_after(head,10);
-	head = insert_before(head,10);
+	printf("Enter the value after which you want to enter new node\n");
+	scanf("%d",&value);
+	head = insert_after(head,value);
+	printf("Enter the value before which you want to enter new node\n");
+	scanf("%d",&value);
+	head = insert_before(head,value);
 	display_ll(head);
 	return 0;
 }
